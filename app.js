@@ -27,6 +27,21 @@ app.get('/detail', function (req, res) {
   res.render('detail', req.query);
 });
 
+app.get('/success', function (req, res) {
+  console.log('success', req.query);
+  res.render('result', req.query);
+});
+
+app.get('/failure', function (req, res) {
+  console.log('failure', req.query);
+  res.render('result', req.query);
+});
+
+app.get('/pending', function (req, res) {
+  console.log('pending', req.query);
+  res.render('result', req.query);
+});
+
 app.post('/preference', async function (req, res) {
     try {
       const preferenceId = await preference.createPreference(req.body);

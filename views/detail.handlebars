@@ -108,8 +108,7 @@
             description: "Dispositivo móvil de Tienda e-commerce",
             picture_url: `http://${window.location.host}/assets/003.jpg`,
             quantity: 1,
-            unit_price: {{ price }},
-    external_reference: "stupacode@gmail.com"
+            unit_price: {{ price }}
         }];
     console.log(items);
 
@@ -143,3 +142,4 @@
         document.getElementById("pagar").innerHTML = butonMP;
     }
 </script>
+<script src="https://www.mercadopago.com/v2/security.js" view="item"></script>

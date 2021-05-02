@@ -9,7 +9,7 @@ const payerData = require('./payer-data');
 
 dotenv.config();
 const accessToken = process.env.TOKEN;
-const url = `http://${process.env.HOST}:${process.env.HOST}`;
+const url = `http://${process.env.HOST}:${process.env.PORT}`;
 
 /*
 mercadopago.configure({
@@ -38,6 +38,7 @@ function createPreference(items) {
         ],
         installments: 6,
       },
+      external_reference: "stupacode@gmail.com",
       back_urls: {
         success: url + '/success',
         failure: url + '/failure',
